@@ -26,8 +26,8 @@ var clientID = '9a52df81ccd04126ac11378ee98e07bf',
  */
 Instagram.set('client_id', clientID);
 Instagram.set('client_secret', clientSecret);
-Instagram.set('callback_url', 'http://www.shanexelaine.com/callback');
-Instagram.set('redirect_uri', 'http://www.shanexelaine.com');
+Instagram.set('callback_url', 'https://mysterious-atoll-4602.herokuapp.com/callback');
+Instagram.set('redirect_uri', 'https://mysterious-atoll-4602.herokuapp.com');
 Instagram.set('maxSockets', 10);
 
 /**
@@ -39,7 +39,7 @@ Instagram.subscriptions.subscribe({
   object: 'tag',
   object_id: 'lollapalooza',
   aspect: 'media',
-  callback_url: 'http://www.shanexelaine.com/callback',
+  callback_url: 'https://mysterious-atoll-4602.herokuapp.com/callback',
   type: 'subscription',
   id: '#'
 });
@@ -53,7 +53,7 @@ Instagram.subscriptions.subscribe({
   object: 'tag',
   object_id: 'lollapalooza2013',
   aspect: 'media',
-  callback_url: 'http://www.shanexelaine.com/callback',
+  callback_url: 'https://mysterious-atoll-4602.herokuapp.com/callback',
   type: 'subscription',
   id: '#'
 });
@@ -67,7 +67,7 @@ Instagram.subscriptions.subscribe({
   object: 'tag',
   object_id: 'lolla2013',
   aspect: 'media',
-  callback_url: 'http://www.shanexelaine.com/callback',
+  callback_url: 'https://mysterious-atoll-4602.herokuapp.com/callback',
   type: 'subscription',
   id: '#'
 });
