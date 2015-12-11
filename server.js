@@ -18,17 +18,45 @@ var pub = __dirname + '/public',
  * Set the 'client ID' and the 'client secret' to use on Instagram
  * @type {String}
  */
-var clientID = '9a52df81ccd04126ac11378ee98e07bf',
-    clientSecret = '7de19de8da17493e9476d4ae5e36626b';
+var clientID = 'fef6502c1de540e4b6084b2c42b7594f',
+    clientSecret = '7cc539f992824ba5a9d07850e1b30f8e';
 
 /**
  * Set the configuration
  */
-Instagram.set('client_token', clientID);
+Instagram.set('client_id', clientID);
 Instagram.set('client_secret', clientSecret);
 Instagram.set('callback_url', 'http://mysterious-atoll-4602.herokuapp.com/callback');
 Instagram.set('redirect_uri', 'http://mysterious-atoll-4602.herokuapp.com');
 Instagram.set('maxSockets', 10);
+
+/**
+ * Uses the library "instagram-node-lib" to Subscribe to the Instagram API Real Time
+ * with the tag "hashtag" lollapalooza
+ * @type {String}
+ */
+Instagram.subscriptions.subscribe({
+  object: 'tag',
+  object_id: 'lollapalooza',
+  aspect: 'media',
+  callback_url: 'http://mysterious-atoll-4602.herokuapp.com/callback',
+  type: 'subscription',
+  id: '#'
+});
+
+/**
+ * Uses the library "instagram-node-lib" to Subscribe to the Instagram API Real Time
+ * with the tag "hashtag" lollapalooza2013
+ * @type {String}
+ */
+Instagram.subscriptions.subscribe({
+  object: 'tag',
+  object_id: 'lollapalooza2013',
+  aspect: 'media',
+  callback_url: 'http://mysterious-atoll-4602.herokuapp.com/callback',
+  type: 'subscription',
+  id: '#'
+});
 
 /**
  * Uses the library "instagram-node-lib" to Subscribe to the Instagram API Real Time
@@ -37,7 +65,7 @@ Instagram.set('maxSockets', 10);
  */
 Instagram.subscriptions.subscribe({
   object: 'tag',
-  object_id: 'shanexelaine',
+  object_id: 'lolla2013',
   aspect: 'media',
   callback_url: 'http://mysterious-atoll-4602.herokuapp.com/callback',
   type: 'subscription',
@@ -88,7 +116,7 @@ app.get("/views", function(req, res){
  */
 io.sockets.on('connection', function (socket) {
   Instagram.tags.recent({
-      name: 'shanexelaine',
+      name: 'lollapalooza',
       complete: function(data) {
         socket.emit('firstShow', { firstShow: data });
       }
@@ -111,7 +139,7 @@ app.post('/callback', function(req, res) {
     // Grab the hashtag "tag.object_id"
     // concatenate to the url and send as a argument to the client side
     data.forEach(function(tag) {
-      var url = 'https://api.instagram.com/v1/tags/shanexelaine/media/recent?access_token=1707733534.9a52df8.47404d67519e4af7bdd7a06c18984d3c';
+      var url = 'https://api.instagram.com/v1/tags/' + tag.object_id + '/media/recent?client_id='+clientID;
       sendMessage(url);
 
     });
