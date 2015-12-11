@@ -18,7 +18,7 @@ var pub = __dirname + '/public',
  * Set the 'client ID' and the 'client secret' to use on Instagram
  * @type {String}
  */
-var clientID = '479edbf0004c42758987cf0244afd3ef',
+var clientID = '9a52df81ccd04126ac11378ee98e07bf',
     clientSecret = '7de19de8da17493e9476d4ae5e36626b';
 
 /**
@@ -139,7 +139,7 @@ app.post('/callback', function(req, res) {
     // Grab the hashtag "tag.object_id"
     // concatenate to the url and send as a argument to the client side
     data.forEach(function(tag) {
-      var url = 'https://api.instagram.com/v1/tags/' + tag.object_id + '/media/recent?client_id='+clientID;
+      var url = 'https://api.instagram.com/v1/tags/' + tag.object_id + '/media/recent?client_id='+'1707733534.9a52df8.47404d67519e4af7bdd7a06c18984d3c';
       sendMessage(url);
 
     });
