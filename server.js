@@ -47,7 +47,9 @@ Instagram.subscriptions.subscribe({
 
 // if you want to unsubscribe to any hashtag you subscribe
 // just need to pass the ID Instagram send as response to you
-Instagram.subscriptions.unsubscribe({ id: '3668016' });
+Instagram.subscriptions.unsubscribe({ id: '21182655' });
+Instagram.subscriptions.unsubscribe({ id: '21182654' });
+Instagram.subscriptions.unsubscribe({ id: '21182653' });
 
 // https://devcenter.heroku.com/articles/using-socket-io-with-node-js-on-heroku
 io.configure(function () {
