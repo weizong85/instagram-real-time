@@ -230,6 +230,7 @@ a:hover {
 * @footer
 ************/
 #footer {
+  display: none;
 	position: fixed;
 	bottom: 0;
 	background: url(../images/bg-footer.png) no-repeat 0;
