@@ -18,7 +18,7 @@ var pub = __dirname + '/public',
  * Set the 'client ID' and the 'client secret' to use on Instagram
  * @type {String}
  */
-var clientID = '9a52df81ccd04126ac11378ee98e07bf',
+var clientID = '479edbf0004c42758987cf0244afd3ef',
     clientSecret = '7de19de8da17493e9476d4ae5e36626b';
 
 /**
