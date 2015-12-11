@@ -1,5 +1,5 @@
 (function() {
-    var socket = io.connect('https://mysterious-atoll-4602.herokuapp.com');
+    var socket = io.connect('https://lollagram.herokuapp.com');
 
     /**
      * [Namespacing]
