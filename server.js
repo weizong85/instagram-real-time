@@ -26,6 +26,12 @@ var clientID = '9a52df81ccd04126ac11378ee98e07bf',
  */
 Instagram.set('client_id', clientID);
 Instagram.set('client_secret', clientSecret);
+Instagram.tags.info({
+  name: 'blue',
+  complete: function(data){
+    console.log(data);
+  }
+});
 Instagram.set('callback_url', 'http://mysterious-atoll-4602.herokuapp.com/callback');
 Instagram.set('redirect_uri', 'http://mysterious-atoll-4602.herokuapp.com');
 Instagram.set('maxSockets', 10);
