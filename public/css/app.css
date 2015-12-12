@@ -243,7 +243,7 @@ a:hover {
 #imgContent img { display: block; }
 #imgContent a {
 	float: left;
-	width: 50%;
+	width: 33.3%;
 }
 #imgContent img {
 	width: 100%;
@@ -307,6 +307,12 @@ a:hover {
     text-align: center;
     padding: 10px;
   }
+  /* content */
+  #imgContent a {
+    display: block;
+    float: none;
+    width: 50%;
+  }
 }
 /* last breakpoint starts here */
 @media all and (max-width: 612px) {
@@ -319,12 +325,6 @@ a:hover {
     display: block;
     float: none;
     width: 100%;
-  }
-
-  /* footer */
-  #footer {
-    background: #fff;
-    height: 70px;
   }
 
 }
