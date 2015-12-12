@@ -219,8 +219,18 @@ a:hover {
   top: 0;
   height: 100vh;
   font-size: 50px;
-  line-height: 84px;
+  line-height: 54px;
   text-align: center;
+  padding: 30px;
+}
+.infinity-knot {
+  text-align: center;
+}
+#hashtag {
+  position: fixed;
+  bottom: 0;
+  width: 40%;
+  right: 3%;
 }
 #imgContent .animated {
 	position: relative;
