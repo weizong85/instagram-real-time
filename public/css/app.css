@@ -24,9 +24,9 @@ html {
 /* font-family: 'Open Sans', sans-serif; */
 
 body {
-	background: url(../images/bg.jpg) repeat 0 0;
+	background: url(../images/bg.png) repeat 0 0;
   font-size: 62.5%;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Fredericka the Great', sans-serif;
   overflow-x: hidden;
 }
 
@@ -209,8 +209,18 @@ a:hover {
 /***********
 * @Image wrapper
 ************/
+@media (max-width: 600px) {
+  
+}
 #imgContent {
-	width: 100%;
+	width: 70%;
+}
+#descriptionContent {
+  width: 30%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 10vh;
 }
 #imgContent .animated {
 	position: relative;
