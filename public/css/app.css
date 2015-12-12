@@ -209,18 +209,18 @@ a:hover {
 /***********
 * @Image wrapper
 ************/
-@media (max-width: 600px) {
-  
-}
 #imgContent {
-	width: 70%;
+	width: 66%;
 }
 #descriptionContent {
-  width: 30%;
+  width: 34%;
   position: fixed;
   right: 0;
   top: 0;
-  height: 10vh;
+  height: 100vh;
+  font-size: 50px;
+  line-height: 84px;
+  text-align: center;
 }
 #imgContent .animated {
 	position: relative;
@@ -230,7 +230,7 @@ a:hover {
 #imgContent img { display: block; }
 #imgContent a {
 	float: left;
-	width: 16.640625%;
+	width: 50%;
 }
 #imgContent img {
 	width: 100%;
@@ -347,7 +347,11 @@ a:hover {
     width: 50%;
   }
 }
-
+.hashtag {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
 /* last breakpoint starts here */
 @media all and (max-width: 612px) {
   /* content */
@@ -356,6 +360,7 @@ a:hover {
     float: none;
     width: 100%;
   }
+
   /* footer */
   #footer {
     background: #fff;
